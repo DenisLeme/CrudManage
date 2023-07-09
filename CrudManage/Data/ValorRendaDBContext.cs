@@ -1,5 +1,6 @@
 ﻿using CrudManage.Models;
 using Microsoft.EntityFrameworkCore;
+using CrudManage.Data.Map;
 
 namespace CrudManage.Data
 {
@@ -14,7 +15,11 @@ namespace CrudManage.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new DescricaoMap());
+            modelBuilder.ApplyConfiguration(new RendaMap());
+
             base.OnModelCreating(modelBuilder);
+
         }
     }
 }
