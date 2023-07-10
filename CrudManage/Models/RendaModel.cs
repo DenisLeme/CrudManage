@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string? Name { get; set; }
-        public int ValorRenda { get; set; }
+        public decimal ValorRenda { get; set; }
         public string? Descricao { get; set; }
     }
 }
